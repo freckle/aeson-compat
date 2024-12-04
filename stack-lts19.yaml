@@ -1,0 +1,5 @@
+# https://www.stackage.org/lts-19.33/package/aeson-2.0.3.0
+resolver: lts-19.33
+extra-deps:
+  # 2.0.3.0 is tested in lts-20, use this one to test 2.0.0.0
+  - aeson-2.0.0.0
