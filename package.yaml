@@ -1,22 +1,15 @@
-name: haskell-library-template
-version: 0.0.0.0
+name: aeson-compat
+version: 1.0.0.0
 maintainer: Freckle Education
 category: Utils
-github: freckle/haskell-library-template
-synopsis: Short synopsis here
+github: freckle/aeson-compat
+synopsis: Compatibility modules between major aeson versions
 description: |
-  Longer description here
-
-  Haddocks are more valuable if you reproduce the main README example here, but
-  you can also just direct users to the README if you prefer not to take on that
-  duplication burden.
+  TODO
 
 extra-doc-files:
   - README.md
   - CHANGELOG.md
-
-extra-source-files:
-  - package.yaml
 
 ghc-options:
   - -Weverything
@@ -29,6 +22,9 @@ ghc-options:
   - -Wno-safe
   - -Wno-unsafe
 
+  # Not all branches use all imports
+  - -Wno-unused-imports
+
 when:
   - condition: "impl(ghc >= 9.2)"
     ghc-options:
@@ -37,6 +33,9 @@ when:
     ghc-options:
       - -Wno-missing-safe-haskell-mode
       - -Wno-prepositive-qualified-module
+
+      # Not all branches use all deps
+      - -Wno-unused-packages
   - condition: "impl(ghc >= 8.8)"
     ghc-options:
       - -fwrite-ide-info
@@ -71,20 +70,30 @@ default-extensions:
   - TypeFamilies
 
 library:
-  source-dirs: library
+  source-dirs: src
+  dependencies:
+    - aeson
+    - containers
+    - hashable
+    - text
+    - text-short
+    - these
+    - unordered-containers
 
 tests:
-  spec:
-    main: Spec.hs
-    source-dirs: tests
-    ghc-options: -threaded -rtsopts "-with-rtsopts=-N"
-    dependencies:
-      #- haskell-library-template
-      - hspec
-      - hspec-junit-formatter
+  # spec:
+  #   main: Spec.hs
+  #   source-dirs: tests
+  #   ghc-options: -threaded -rtsopts "-with-rtsopts=-N"
+  #   dependencies:
+  #     - aeson-compat
+  #     - hspec
+  #     - hspec-junit-formatter
 
   readme:
     main: README.lhs
     ghc-options: -pgmL markdown-unlit
     dependencies:
+      - aeson
+      - aeson-compat
       - markdown-unlit
