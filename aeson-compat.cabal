@@ -5,7 +5,7 @@ cabal-version: 1.18
 -- see: https://github.com/sol/hpack
 
 name:           aeson-compat
-version:        1.0.0.0
+version:        0.0.0.1
 synopsis:       Compatibility modules between major aeson versions
 description:    TODO
 category:       Utils
@@ -25,7 +25,6 @@ source-repository head
 
 library
   exposed-modules:
-      Data.Aeson.V2
       Data.Aeson.V2.Key
       Data.Aeson.V2.KeyMap
       Data.HashMap.Strict.Compat

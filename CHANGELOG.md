@@ -1,5 +1,5 @@
-## [_Unreleased_](https://github.com/freckle/haskell-library-template/compare/v__...main)
+## [_Unreleased_](https://github.com/freckle/aeson-compat/compare/v0.0.0.1...main)
 
-## [v0.0.0.0](https://github.com/freckle/haskell-library-template/tree/v0.0.0.0)
+## [v0.0.0.1](https://github.com/freckle/aeson-compat/tree/v0.0.0.1)
 
-First tagged release.
+Initial pre-release.
