@@ -96,4 +96,5 @@ tests:
     dependencies:
       - aeson
       - aeson-compat
+    build-tools:
       - markdown-unlit
