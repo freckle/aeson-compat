@@ -1,5 +1,8 @@
 # aeson-compat
 
+ > [!WARNING]
+ > This repository is archived and no longer maintained.
+
 [![Hackage](https://img.shields.io/hackage/v/aeson-compat.svg?style=flat)](https://hackage.haskell.org/package/aeson-compat)
 [![Stackage Nightly](http://stackage.org/package/aeson-compat/badge/nightly)](http://stackage.org/nightly/package/aeson-compat)
 [![Stackage LTS](http://stackage.org/package/aeson-compat/badge/lts)](http://stackage.org/lts/package/aeson-compat)
